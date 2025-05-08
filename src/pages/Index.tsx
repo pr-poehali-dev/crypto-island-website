@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import TokenCard from "@/components/TokenCard";
 import IslandMap from "@/components/IslandMap";
 import Roadmap from "@/components/Roadmap";
+import Tokenomics from "@/components/Tokenomics";
+import TokenSale from "@/components/TokenSale";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import VideoPlayer from "@/components/VideoPlayer";
@@ -11,30 +13,30 @@ const Index = () => {
   // Features of MEMELAND
   const features = [
     {
-      title: "Citizenship",
+      title: "Гражданство",
       description:
-        "Every token holder gets citizenship in MEMELAND and voting rights on island governance",
+        "Каждый держатель токена получает гражданство в MEMELAND и право голоса в управлении островом",
       icon: "Award",
       isNew: false,
     },
     {
-      title: "Top 100 Perks",
+      title: "Привилегии для топ-100",
       description:
-        "Exclusive ID cards, titles, and the right to name a street on the physical island",
+        "Эксклюзивные ID-карты, титулы и право назвать улицу на физическом острове",
       icon: "Crown",
       isNew: false,
     },
     {
-      title: "Physical Island",
+      title: "Физический остров",
       description:
-        "A real piece of land that will transform from digital token to physical property",
+        "Реальный участок земли, который превратится из цифрового токена в физическую собственность",
       icon: "Map",
       isNew: true,
     },
     {
-      title: "Meme Monuments",
+      title: "Памятники мемам",
       description:
-        "Monuments to legendary crypto memes built on different parts of the island",
+        "Памятники легендарным крипто-мемам, построенные в разных частях острова",
       icon: "Landmark",
       isNew: false,
     },
@@ -44,15 +46,47 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
 
+      {/* Добавляем живописную секцию с островом */}
+      <section className="py-12 px-4 bg-[#E6F9FF] relative overflow-hidden">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="md:w-1/2 mb-8 md:mb-0">
+              <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-4">
+                Наш остров ждет тебя
+              </h2>
+              <p className="text-gray-700 mb-6 max-w-lg">
+                MEMELAND - это не просто токен, это будущий рай для
+                крипто-энтузиастов. Представьте себе тропический остров с
+                пальмами, белым песком и бирюзовой водой, где все решения
+                принимаются сообществом.
+              </p>
+              <Button className="bg-[#1A1F2C] hover:bg-[#1A1F2C]/90">
+                <Icon name="MapPin" className="mr-2" size={18} />
+                Выбрать свой участок
+              </Button>
+            </div>
+            <div className="md:w-1/2 relative">
+              <img
+                src="https://cdn.poehali.dev/files/c1d58ffa-3ea9-43bc-b43a-e5803dc2c261.jpg"
+                alt="MEMELAND Island"
+                className="rounded-xl shadow-lg w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute -top-8 -right-8 w-24 h-24 bg-[#FFC107] rounded-full opacity-20"></div>
+              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#33C3F0] rounded-full opacity-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-2">
-                About MEMELAND
+                О MEMELAND
               </h2>
               <p className="text-gray-600">
-                The world's first crypto-meme state with a physical island
+                Первое в мире крипто-мем государство с физическим островом
               </p>
             </div>
           </div>
@@ -71,6 +105,70 @@ const Index = () => {
         </div>
       </section>
 
+      <Tokenomics />
+
+      <section className="py-12 px-4 bg-[#F5FAFF] relative overflow-hidden">
+        <div className="absolute -top-16 right-0 w-64 h-64 bg-[#FFC107]/10 rounded-full"></div>
+        <div className="absolute -bottom-32 left-0 w-96 h-96 bg-[#33C3F0]/10 rounded-full"></div>
+
+        <div className="container mx-auto relative">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="md:w-1/2 mb-8 md:mb-0 order-2 md:order-1">
+              <img
+                src="https://cdn.poehali.dev/files/0948e6fc-821e-4024-b542-ae6ba48806c8.jpeg"
+                alt="Swimming Pig in MEMELAND"
+                className="rounded-xl shadow-lg w-full max-w-lg transform hover:rotate-1 transition-transform duration-500"
+              />
+              <div className="bg-white p-4 rounded-lg shadow-md max-w-sm mx-auto -mt-16 relative z-10">
+                <p className="font-medium text-[#1A1F2C]">
+                  "На нашем острове даже свиньи плавают в бирюзовой воде! Кто
+                  сказал, что свиньи не умеют плавать?"
+                </p>
+              </div>
+            </div>
+            <div className="md:w-1/2 order-1 md:order-2">
+              <div className="inline-block px-4 py-1 bg-[#33C3F0]/20 text-[#33C3F0] rounded-full text-sm font-medium mb-4">
+                УНИКАЛЬНЫЙ ОПЫТ
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-4">
+                Животный мир MEMELAND
+              </h2>
+              <p className="text-gray-700 mb-6">
+                Наш остров станет домом не только для крипто-энтузиастов, но и
+                для удивительных животных. Представьте, как вы просыпаетесь под
+                шум волн, выходите на пляж и видите плавающих свиней,
+                дружелюбных обезьян и других экзотических животных.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#FFC107]/20 flex items-center justify-center text-[#FFC107] shrink-0">
+                    <Icon name="Fish" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Морская жизнь</h4>
+                    <p className="text-gray-600 text-sm">
+                      Кристально чистая вода, коралловые рифы и богатый
+                      подводный мир
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#33C3F0]/20 flex items-center justify-center text-[#33C3F0] shrink-0">
+                    <Icon name="Leaf" size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Тропическая флора</h4>
+                    <p className="text-gray-600 text-sm">
+                      Кокосовые пальмы, экзотические фрукты и яркие цветы
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Roadmap />
 
       <section
@@ -80,68 +178,73 @@ const Index = () => {
         <IslandMap />
       </section>
 
-      <section id="community" className="py-16 px-4 bg-[#1A1F2C] text-white">
-        <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center font-playfair mb-12">
-            Membership Tiers
+      <TokenSale />
+
+      <section className="py-16 px-4 bg-[#1A1F2C] text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFC107]/5 rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#33C3F0]/5 rounded-full"></div>
+
+        <div className="container mx-auto relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-center font-playfair mb-8">
+            Уровни участия
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
               <div className="text-[#FFC107] font-bold mb-2 flex items-center gap-2">
                 <Icon name="Users" size={18} />
-                <span>Basic Citizen</span>
+                <span>Базовый гражданин</span>
               </div>
               <div className="text-lg font-bold mb-4">1+ $MEMELAND</div>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Citizenship in MEMELAND</span>
+                  <span>Гражданство в MEMELAND</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Voting rights on island laws</span>
+                  <span>Право голоса в законах острова</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Access to community events</span>
+                  <span>Доступ к мероприятиям сообщества</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>MEMELAND passport (digital)</span>
+                  <span>Цифровой паспорт MEMELAND</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm transform scale-105 border border-[#FFC107]">
               <div className="absolute -top-3 right-4 bg-[#FFC107] text-[#1A1F2C] px-3 py-1 rounded-full text-sm font-bold">
-                POPULAR
+                ПОПУЛЯРНО
               </div>
               <div className="text-[#FFC107] font-bold mb-2 flex items-center gap-2">
                 <Icon name="Shield" size={18} />
-                <span>Island Governor</span>
+                <span>Губернатор острова</span>
               </div>
-              <div className="text-lg font-bold mb-4">Top 100 Holder</div>
+              <div className="text-lg font-bold mb-4">Топ-100 держателей</div>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>All Basic Citizen perks</span>
+                  <span>Все преимущества базового гражданина</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Exclusive physical ID card</span>
+                  <span>Эксклюзивная физическая ID-карта</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Title (Governor, Meme Lord, Chief Kek)</span>
+                  <span>Титул (Губернатор, Мем Лорд, Главный Кек)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Right to name a street on the island</span>
+                  <span>Право назвать улицу на острове</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Priority access to island events</span>
+                  <span>Приоритетный доступ к мероприятиям острова</span>
                 </li>
               </ul>
             </div>
@@ -149,28 +252,46 @@ const Index = () => {
             <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
               <div className="text-[#33C3F0] font-bold mb-2 flex items-center gap-2">
                 <Icon name="Building" size={18} />
-                <span>Property Owner</span>
+                <span>Владелец собственности</span>
               </div>
-              <div className="text-lg font-bold mb-4">Top 10 Holder</div>
+              <div className="text-lg font-bold mb-4">Топ-10 держателей</div>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>All Governor perks</span>
+                  <span>Все преимущества губернатора</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Land allocation on physical island</span>
+                  <span>Выделение земли на физическом острове</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Lifetime membership in Council</span>
+                  <span>Пожизненное членство в Совете</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Check" size={16} className="text-green-400" />
-                  <span>Design input on island architecture</span>
+                  <span>Участие в проектировании архитектуры острова</span>
                 </li>
               </ul>
             </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold mb-6">Местные жители</h3>
+            <img
+              src="https://cdn.poehali.dev/files/6427af35-b9a0-4461-93d1-836a4ef4f6ee.jpeg"
+              alt="MEMELAND Native"
+              className="rounded-xl shadow-lg max-w-md mx-auto mb-6"
+            />
+            <p className="text-lg max-w-2xl mx-auto text-white/80">
+              Жители MEMELAND славятся своим дружелюбием и умением
+              организовывать легендарные крипто-вечеринки. Присоединяйтесь к
+              нашему сообществу и станьте частью истории!
+            </p>
+            <Button className="mt-8 bg-[#FFC107] text-[#1A1F2C] hover:bg-[#FFC107]/80">
+              <Icon name="PartyPopper" className="mr-2" size={18} />
+              Получить гражданство
+            </Button>
           </div>
         </div>
       </section>
@@ -179,7 +300,7 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-6">
-              🚨 ATTENTION, MEME COLONIZERS! 🚨
+              🚨 ВНИМАНИЕ, МЕМ-КОЛОНИЗАТОРЫ! 🚨
             </h2>
             <img
               src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
@@ -188,93 +309,93 @@ const Index = () => {
             />
 
             <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-              <h3 className="text-2xl font-bold mb-4">🌎 What is MEMELAND?</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                🌎 Что такое MEMELAND?
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div className="p-4 bg-[#F8F9FA] rounded-lg">
                   <p className="font-bold text-[#1A1F2C] mb-2">
-                    ✔ The world's first crypto-meme state
+                    ✔ Первое в мире крипто-мем государство
                   </p>
                 </div>
                 <div className="p-4 bg-[#F8F9FA] rounded-lg">
                   <p className="font-bold text-[#1A1F2C] mb-2">
-                    ✔ An island with monuments to legendary memes
+                    ✔ Остров с памятниками легендарным мемам
                   </p>
                 </div>
                 <div className="p-4 bg-[#F8F9FA] rounded-lg">
                   <p className="font-bold text-[#1A1F2C] mb-2">
-                    ✔ A community where only the real ones rule
+                    ✔ Сообщество, где правят только настоящие
                   </p>
                 </div>
               </div>
 
               <h3 className="text-xl font-bold mb-3">
-                Every $MEMELAND token gives you:
+                Каждый токен $MEMELAND дает вам:
               </h3>
               <ul className="text-left max-w-md mx-auto mb-6 space-y-2">
                 <li className="flex items-center gap-2">
                   <span className="text-[#33C3F0] font-bold">🔹</span>
-                  <span>Citizenship in Memeland</span>
+                  <span>Гражданство в Memeland</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#33C3F0] font-bold">🔹</span>
-                  <span>Voting rights on island laws</span>
+                  <span>Право голоса по законам острова</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#33C3F0] font-bold">🔹</span>
-                  <span>
-                    A chance to join the Top 100 and get a physical ID
-                  </span>
+                  <span>Шанс попасть в Топ-100 и получить физический ID</span>
                 </li>
               </ul>
 
               <div className="bg-[#1A1F2C] text-white p-4 rounded-lg mb-6">
                 <h3 className="text-[#FFC107] text-xl font-bold mb-3">
-                  🏆 TOP 100 HOLDERS GET:
+                  🏆 ТОП-100 ДЕРЖАТЕЛЕЙ ПОЛУЧАЮТ:
                 </h3>
                 <ul className="text-left max-w-md mx-auto space-y-2">
                   <li className="flex items-center gap-2">
                     <span className="text-[#FFC017]">•</span>
-                    <span>Exclusive ID cards</span>
+                    <span>Эксклюзивные ID-карты</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-[#FFC017]">•</span>
-                    <span>Titles (Governor, Meme Lord, Chief Kek)</span>
+                    <span>Титулы (Губернатор, Мем Лорд, Главный Кек)</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-[#FFC017]">•</span>
-                    <span>The right to name a street on the island</span>
+                    <span>Право назвать улицу на острове</span>
                   </li>
                 </ul>
               </div>
 
               <h3 className="text-xl font-bold mb-3">
-                🗺️ Island Plans Include:
+                🗺️ Планы острова включают:
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
                 <div className="p-3 bg-[#F8F9FA] rounded-lg">
-                  <p>• "SHIBA INU" Square</p>
+                  <p>• Площадь "SHIBA INU"</p>
                 </div>
                 <div className="p-3 bg-[#F8F9FA] rounded-lg">
-                  <p>• "FARTCOIN" Beach</p>
+                  <p>• Пляж "FARTCOIN"</p>
                 </div>
                 <div className="p-3 bg-[#F8F9FA] rounded-lg">
-                  <p>• "FLOKI" Forest</p>
+                  <p>• Лес "FLOKI"</p>
                 </div>
               </div>
 
               <div className="text-sm text-gray-600 italic">
-                <p>P.S. This isn't just a token. It's a social experiment.</p>
+                <p>P.S. Это не просто токен. Это социальный эксперимент.</p>
                 <p>
-                  Either we create the most legendary crypto-meme hub or go down
-                  in a blaze of Twitter glory.
+                  Либо мы создадим самый легендарный крипто-мем хаб, либо уйдем
+                  в небытие с славой в Twitter.
                 </p>
-                <p>We're choosing option one.</p>
+                <p>Мы выбираем первый вариант.</p>
               </div>
             </div>
 
             <div className="text-center mt-8">
               <p className="text-gray-600 mb-4">
-                Check out our introduction video:
+                Посмотрите наше вводное видео:
               </p>
               <div className="max-w-2xl mx-auto">
                 <VideoPlayer
@@ -288,7 +409,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button className="bg-[#1A1F2C] hover:bg-[#1A1F2C]/80">
                 <Icon name="Rocket" className="mr-2" size={18} />
-                Become a MEMELAND Citizen
+                Стать гражданином MEMELAND
               </Button>
               <Button
                 variant="outline"
@@ -299,7 +420,7 @@ const Index = () => {
                 rel="noopener noreferrer"
               >
                 <Icon name="Users" className="mr-2" size={18} />
-                Join Our Community
+                Присоединиться к сообществу
               </Button>
             </div>
           </div>
@@ -320,7 +441,8 @@ const Index = () => {
           </div>
 
           <p className="text-sm text-white/60 text-center">
-            © 2025 MEMELAND. All rights reserved. Not financial advice.
+            © 2025 MEMELAND. Все права защищены. Не является финансовым
+            советом.
           </p>
         </div>
       </footer>
