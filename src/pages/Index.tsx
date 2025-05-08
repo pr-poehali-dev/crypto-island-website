@@ -2,7 +2,6 @@ import React from "react";
 import Header from "@/components/Header";
 import TokenCard from "@/components/TokenCard";
 import IslandMap from "@/components/IslandMap";
-import TokenSale from "@/components/TokenSale";
 import Roadmap from "@/components/Roadmap";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
@@ -77,10 +76,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Token Sale Section */}
-      <TokenSale />
-
-      {/* Roadmap Section (заменяем Tokenomics на Roadmap) */}
+      {/* Roadmap Section */}
       <Roadmap />
 
       {/* Island Map Section */}
