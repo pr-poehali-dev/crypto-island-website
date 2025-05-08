@@ -51,6 +51,15 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
+          <a
+            href="https://t.me/memeland_CTO"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex items-center gap-2 bg-[#0088cc] hover:bg-[#0088cc]/90 px-4 py-2 rounded-full text-white font-medium transition-colors"
+          >
+            <Icon name="Send" size={18} />
+            <span>Telegram</span>
+          </a>
           <Button variant="ghost" size="icon" className="md:hidden text-white">
             <Icon name="Menu" size={24} />
           </Button>
@@ -118,13 +127,15 @@ const Header = () => {
               <Icon name="Compass" className="mr-2" size={18} />
               Explore Island
             </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#1A1F2C]"
+            <a
+              href="https://t.me/memeland_CTO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border-white text-white hover:bg-white hover:text-[#1A1F2C] border"
             >
-              <Icon name="Users" className="mr-2" size={18} />
-              Join Community
-            </Button>
+              <Icon name="Send" className="size-4 shrink-0" size={18} />
+              Join Telegram
+            </a>
           </div>
         </div>
 

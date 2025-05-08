@@ -4,6 +4,7 @@ import Gallery from "@/components/Gallery";
 import TokenCard from "@/components/TokenCard";
 import IslandMap from "@/components/IslandMap";
 import Roadmap from "@/components/Roadmap";
+import Icon from "@/components/Icon";
 
 const Index = () => {
   return (
@@ -127,6 +128,15 @@ const Index = () => {
               <p className="text-gray-400">
                 The first token in the world that will become a real island
               </p>
+              <a
+                href="https://t.me/memeland_CTO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-[#0088cc] hover:text-[#0088cc]/80 transition-colors"
+              >
+                <Icon name="Send" size={18} />
+                <span>Join our Telegram</span>
+              </a>
             </div>
 
             <div>
@@ -151,7 +161,15 @@ const Index = () => {
               <h3 className="text-lg font-bold mb-4">Community</h3>
               <ul className="space-y-2">
                 <li>
-                  <span className="text-gray-400">Telegram</span>
+                  <a
+                    href="https://t.me/memeland_CTO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-[#0088cc] transition-colors flex items-center gap-2"
+                  >
+                    <Icon name="Send" size={14} />
+                    <span>Telegram</span>
+                  </a>
                 </li>
                 <li>
                   <span className="text-gray-400">Twitter</span>
