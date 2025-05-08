@@ -289,6 +289,10 @@ const Index = () => {
               <Button
                 variant="outline"
                 className="border-[#1A1F2C] text-[#1A1F2C]"
+                as="a"
+                href="https://t.me/memeland_CTO"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Icon name="Users" className="mr-2" size={18} />
                 Join Our Community
