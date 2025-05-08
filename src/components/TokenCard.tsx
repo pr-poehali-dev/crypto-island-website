@@ -1,8 +1,14 @@
-
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Icon from '@/components/ui/icon';
+import Icon from "@/components/ui/icon";
 
 interface TokenCardProps {
   title: string;
@@ -15,7 +21,7 @@ const TokenCard: React.FC<TokenCardProps> = ({
   title,
   description,
   icon,
-  isNew = false
+  isNew = false,
 }) => {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-all hover:translate-y-[-4px] border-2 border-gray-100">
@@ -29,8 +35,15 @@ const TokenCard: React.FC<TokenCardProps> = ({
               <CardTitle className="text-lg flex items-center gap-2">
                 {title}
                 {isNew && (
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-600 hover:bg-blue-200">
-                    <Icon name="Star" size={12} className="mr-1 text-blue-500" />
+                  <Badge
+                    variant="secondary"
+                    className="bg-blue-100 text-blue-600 hover:bg-blue-200"
+                  >
+                    <Icon
+                      name="Star"
+                      size={12}
+                      className="mr-1 text-blue-500"
+                    />
                     New
                   </Badge>
                 )}
@@ -43,10 +56,7 @@ const TokenCard: React.FC<TokenCardProps> = ({
         <p className="text-gray-600">{description}</p>
       </CardContent>
       <CardFooter className="pt-2 pb-3 flex justify-end">
-        <div className="text-sm text-[#33C3F0] font-medium flex items-center">
-          Learn more
-          <Icon name="ArrowRight" size={16} className="ml-1" />
-        </div>
+        {/* Learn more button removed */}
       </CardFooter>
     </Card>
   );

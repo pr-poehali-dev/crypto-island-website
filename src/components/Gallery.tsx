@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,7 +15,8 @@ const Gallery = () => {
       id: 2,
       url: "https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png",
       title: "Island Concept Art",
-      description: "Artist's rendition of the future MEMELAND island development",
+      description:
+        "Artist's rendition of the future MEMELAND island development",
     },
     {
       id: 3,
@@ -28,7 +28,8 @@ const Gallery = () => {
       id: 4,
       url: "https://cdn.poehali.dev/files/c1d58ffa-3ea9-43bc-b43a-e5803dc2c261.jpg",
       title: "Paradise Beaches",
-      description: "Crystal clear waters and pristine beaches await MEMELAND citizens",
+      description:
+        "Crystal clear waters and pristine beaches await MEMELAND citizens",
     },
   ];
 
@@ -49,11 +50,14 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {images.map((image) => (
-            <Card key={image.id} className="overflow-hidden group hover:shadow-lg transition-all border-2 border-gray-100">
+            <Card
+              key={image.id}
+              className="overflow-hidden group hover:shadow-lg transition-all border-2 border-gray-100"
+            >
               <div className="relative aspect-video overflow-hidden">
-                <img 
-                  src={image.url} 
-                  alt={image.title} 
+                <img
+                  src={image.url}
+                  alt={image.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
