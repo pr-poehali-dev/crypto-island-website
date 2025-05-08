@@ -5,8 +5,6 @@ import Gallery from "@/components/Gallery";
 import TokenCard from "@/components/TokenCard";
 import IslandMap from "@/components/IslandMap";
 import Roadmap from "@/components/Roadmap";
-import TokenSale from "@/components/TokenSale";
-import Tokenomics from "@/components/Tokenomics";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
@@ -112,91 +110,26 @@ const Index = () => {
         </div>
       </section>
 
-      <TokenSale />
-      <Tokenomics />
       <Gallery />
       <IslandMap />
       <Roadmap />
 
       <footer className="bg-[#1A1F2C] text-white py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <img
-                  src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-                  alt="MEMELAND"
-                  className="w-10 h-10 rounded-full"
-                />
-                <span className="text-xl font-bold">MEMELAND</span>
-              </div>
-              <p className="text-gray-400">
-                The first token in the world that will become a real island
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">Project</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#about" className="text-gray-400 hover:text-white transition-colors">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#map" className="text-gray-400 hover:text-white transition-colors">
-                    Island Map
-                  </a>
-                </li>
-                <li>
-                  <a href="#features" className="text-gray-400 hover:text-white transition-colors">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#roadmap" className="text-gray-400 hover:text-white transition-colors">
-                    Roadmap
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">Community</h3>
-              <ul className="space-y-2">
-                <li>
-                  <span className="text-gray-400">Twitter</span>
-                </li>
-                <li>
-                  <span className="text-gray-400">Discord</span>
-                </li>
-                <li>
-                  <span className="text-gray-400">Medium</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold mb-4">Legal Information</h3>
-              <ul className="space-y-2">
-                <li>
-                  <span className="text-gray-400">Terms of Use</span>
-                </li>
-                <li>
-                  <span className="text-gray-400">Privacy Policy</span>
-                </li>
-                <li>
-                  <span className="text-gray-400">Risk Disclosure</span>
-                </li>
-              </ul>
-            </div>
+        <div className="container mx-auto text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <img
+              src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
+              alt="MEMELAND"
+              className="w-10 h-10 rounded-full"
+            />
+            <span className="text-xl font-bold">MEMELAND</span>
           </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-400 max-w-xl mx-auto">
+            The first token in the world that will become a real island
+          </p>
+          
+          <div className="border-t border-gray-700 mt-8 pt-8">
             <p>© 2025 MEMELAND. All rights reserved.</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Not financial advice. Invest wisely.
-            </p>
           </div>
         </div>
       </footer>
