@@ -5,6 +5,7 @@ import IslandMap from "@/components/IslandMap";
 import Roadmap from "@/components/Roadmap";
 import Tokenomics from "@/components/Tokenomics";
 import TokenSale from "@/components/TokenSale";
+import Gallery from "@/components/Gallery";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import VideoPlayer from "@/components/VideoPlayer";
@@ -46,30 +47,29 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* Добавляем живописную секцию с островом */}
-      <section className="py-12 px-4 bg-[#E6F9FF] relative overflow-hidden">
+      {/* Добавляем секцию с главным изображением острова */}
+      <section className="py-12 px-4 bg-gradient-to-b from-white to-[#E6F9FF] relative overflow-hidden">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-8 md:mb-0">
+            <div className="md:w-1/2 mb-8 md:mb-0 relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-4">
-                Наш остров ждет тебя
+                Добро пожаловать в новую эру{" "}
+                <span className="text-[#FFC107]">крипто-островов</span>
               </h2>
               <p className="text-gray-700 mb-6 max-w-lg">
-                MEMELAND - это не просто токен, это будущий рай для
-                крипто-энтузиастов. Представьте себе тропический остров с
-                пальмами, белым песком и бирюзовой водой, где все решения
-                принимаются сообществом.
+                MEMELAND - это не просто криптовалюта, это физический остров,
+                где правят мемы и свободный дух криптосообщества.
               </p>
               <Button className="bg-[#1A1F2C] hover:bg-[#1A1F2C]/90">
                 <Icon name="MapPin" className="mr-2" size={18} />
-                Выбрать свой участок
+                Исследовать остров
               </Button>
             </div>
             <div className="md:w-1/2 relative">
               <img
-                src="https://cdn.poehali.dev/files/c1d58ffa-3ea9-43bc-b43a-e5803dc2c261.jpg"
-                alt="MEMELAND Island"
-                className="rounded-xl shadow-lg w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500"
+                src="https://cdn.poehali.dev/files/5fafd296-55da-4d45-8d3f-752e25a50c23.jpeg"
+                alt="MEMELAND Shiba Inu Island"
+                className="rounded-xl shadow-lg w-full max-w-lg mx-auto hover:shadow-xl transition-shadow duration-300"
               />
               <div className="absolute -top-8 -right-8 w-24 h-24 bg-[#FFC107] rounded-full opacity-20"></div>
               <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#33C3F0] rounded-full opacity-10"></div>
@@ -104,6 +104,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Gallery />
 
       <Tokenomics />
 
@@ -170,15 +172,6 @@ const Index = () => {
       </section>
 
       <Roadmap />
-
-      <section
-        id="features"
-        className="bg-gradient-to-b from-white to-[#F8F9FA]"
-      >
-        <IslandMap />
-      </section>
-
-      <TokenSale />
 
       <section className="py-16 px-4 bg-[#1A1F2C] text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFC107]/5 rounded-full"></div>
@@ -296,131 +289,61 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-[#FFC107]/10">
+      <section
+        id="features"
+        className="bg-gradient-to-b from-white to-[#F8F9FA]"
+      >
+        <IslandMap />
+      </section>
+
+      <TokenSale />
+
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-6">
-              🚨 ВНИМАНИЕ, МЕМ-КОЛОНИЗАТОРЫ! 🚨
+              🏝️ Наш реальный остров 🏝️
             </h2>
             <img
-              src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-              alt="MEMELAND"
-              className="w-24 h-24 mx-auto mb-6 rounded-full shadow"
+              src="https://cdn.poehali.dev/files/c1d58ffa-3ea9-43bc-b43a-e5803dc2c261.jpg"
+              alt="MEMELAND Island"
+              className="w-full max-w-2xl mx-auto rounded-xl shadow-lg mb-6"
             />
 
-            <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+            <div className="bg-[#F8F9FA] p-6 rounded-lg shadow-md mb-8">
               <h3 className="text-2xl font-bold mb-4">
-                🌎 Что такое MEMELAND?
+                Характеристики острова:
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <div className="p-4 bg-[#F8F9FA] rounded-lg">
+                <div className="p-4 bg-white rounded-lg shadow">
                   <p className="font-bold text-[#1A1F2C] mb-2">
-                    ✔ Первое в мире крипто-мем государство
+                    ⛱️ Белоснежные пляжи
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Километры чистейших песчаных пляжей с бирюзовой водой
                   </p>
                 </div>
-                <div className="p-4 bg-[#F8F9FA] rounded-lg">
+                <div className="p-4 bg-white rounded-lg shadow">
                   <p className="font-bold text-[#1A1F2C] mb-2">
-                    ✔ Остров с памятниками легендарным мемам
+                    🌴 Тропический лес
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Густая растительность и экзотические фрукты
                   </p>
                 </div>
-                <div className="p-4 bg-[#F8F9FA] rounded-lg">
+                <div className="p-4 bg-white rounded-lg shadow">
                   <p className="font-bold text-[#1A1F2C] mb-2">
-                    ✔ Сообщество, где правят только настоящие
+                    🏢 Инфраструктура
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Wi-Fi на всей территории и крипто-кафе
                   </p>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold mb-3">
-                Каждый токен $MEMELAND дает вам:
-              </h3>
-              <ul className="text-left max-w-md mx-auto mb-6 space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="text-[#33C3F0] font-bold">🔹</span>
-                  <span>Гражданство в Memeland</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#33C3F0] font-bold">🔹</span>
-                  <span>Право голоса по законам острова</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#33C3F0] font-bold">🔹</span>
-                  <span>Шанс попасть в Топ-100 и получить физический ID</span>
-                </li>
-              </ul>
-
-              <div className="bg-[#1A1F2C] text-white p-4 rounded-lg mb-6">
-                <h3 className="text-[#FFC107] text-xl font-bold mb-3">
-                  🏆 ТОП-100 ДЕРЖАТЕЛЕЙ ПОЛУЧАЮТ:
-                </h3>
-                <ul className="text-left max-w-md mx-auto space-y-2">
-                  <li className="flex items-center gap-2">
-                    <span className="text-[#FFC017]">•</span>
-                    <span>Эксклюзивные ID-карты</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-[#FFC017]">•</span>
-                    <span>Титулы (Губернатор, Мем Лорд, Главный Кек)</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-[#FFC017]">•</span>
-                    <span>Право назвать улицу на острове</span>
-                  </li>
-                </ul>
-              </div>
-
-              <h3 className="text-xl font-bold mb-3">
-                🗺️ Планы острова включают:
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-                <div className="p-3 bg-[#F8F9FA] rounded-lg">
-                  <p>• Площадь "SHIBA INU"</p>
-                </div>
-                <div className="p-3 bg-[#F8F9FA] rounded-lg">
-                  <p>• Пляж "FARTCOIN"</p>
-                </div>
-                <div className="p-3 bg-[#F8F9FA] rounded-lg">
-                  <p>• Лес "FLOKI"</p>
-                </div>
-              </div>
-
-              <div className="text-sm text-gray-600 italic">
-                <p>P.S. Это не просто токен. Это социальный эксперимент.</p>
-                <p>
-                  Либо мы создадим самый легендарный крипто-мем хаб, либо уйдем
-                  в небытие с славой в Twitter.
-                </p>
-                <p>Мы выбираем первый вариант.</p>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <p className="text-gray-600 mb-4">
-                Посмотрите наше вводное видео:
-              </p>
-              <div className="max-w-2xl mx-auto">
-                <VideoPlayer
-                  videoUrl="https://cdn.poehali.dev/files/memeland_overview.mp4"
-                  posterUrl="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-                  className="rounded-xl shadow-lg overflow-hidden aspect-video"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button className="bg-[#1A1F2C] hover:bg-[#1A1F2C]/80">
-                <Icon name="Rocket" className="mr-2" size={18} />
-                Стать гражданином MEMELAND
-              </Button>
-              <Button
-                variant="outline"
-                className="border-[#1A1F2C] text-[#1A1F2C]"
-                as="a"
-                href="https://t.me/memeland_CTO"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon name="Users" className="mr-2" size={18} />
-                Присоединиться к сообществу
+              <Button className="mt-4 bg-[#1A1F2C] hover:bg-[#1A1F2C]/90">
+                <Icon name="MapPin" className="mr-2" size={18} />
+                Посмотреть карту острова
               </Button>
             </div>
           </div>
