@@ -1,7 +1,7 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-import VideoPlayer from "@/components/VideoPlayer";
 
 const Header = () => {
   return (
@@ -21,7 +21,7 @@ const Header = () => {
             alt="MEMELAND Logo"
             className="w-12 h-12 rounded-full"
           />
-          <span className="text-white font-bold text-xl font-playfair">
+          <span className="text-white font-bold text-xl">
             MEMELAND
           </span>
         </div>
@@ -52,12 +52,18 @@ const Header = () => {
             Community
           </a>
         </div>
+
+        <div className="flex items-center gap-4">
+          <Button variant="ghost" size="icon" className="md:hidden text-white">
+            <Icon name="Menu" size={24} />
+          </Button>
+        </div>
       </nav>
 
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-12 pb-24 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-          <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Welcome to the <span className="text-[#FFC107]">MEMELAND</span>{" "}
             Island
           </h1>
@@ -88,11 +94,13 @@ const Header = () => {
         </div>
 
         <div className="md:w-1/2 flex justify-center">
-          <VideoPlayer
-            videoUrl="https://cdn.poehali.dev/files/memeland_promo.mp4"
-            posterUrl="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-            className="w-full max-w-md rounded-2xl shadow-lg overflow-hidden"
-          />
+          <div className="w-full max-w-md rounded-2xl shadow-lg overflow-hidden">
+            <img 
+              src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
+              alt="MEMELAND Island" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
 
