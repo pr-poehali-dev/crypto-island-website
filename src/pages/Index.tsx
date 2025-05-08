@@ -3,6 +3,8 @@ import React from "react";
 import Header from "@/components/Header";
 import TokenCard from "@/components/TokenCard";
 import IslandMap from "@/components/IslandMap";
+import TokenSale from "@/components/TokenSale";
+import Tokenomics from "@/components/Tokenomics";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
@@ -67,6 +69,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Token Sale Section */}
+      <TokenSale />
+      
+      {/* Tokenomics Section */}
+      <Tokenomics />
       
       {/* Island Map Section */}
       <section id="features" className="bg-gradient-to-b from-white to-[#F8F9FA]">
