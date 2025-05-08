@@ -5,6 +5,7 @@ import IslandMap from "@/components/IslandMap";
 import Roadmap from "@/components/Roadmap";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const Index = () => {
   // Features of MEMELAND
@@ -41,10 +42,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header with Hero Section */}
       <Header />
 
-      {/* About Section */}
       <section id="about" className="py-16 px-4">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
@@ -76,10 +75,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Roadmap Section */}
       <Roadmap />
 
-      {/* Island Map Section */}
       <section
         id="features"
         className="bg-gradient-to-b from-white to-[#F8F9FA]"
@@ -87,7 +84,6 @@ const Index = () => {
         <IslandMap />
       </section>
 
-      {/* Membership Tiers Section */}
       <section id="community" className="py-16 px-4 bg-[#1A1F2C] text-white">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center font-playfair mb-12">
@@ -183,7 +179,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-16 px-4 bg-[#FFC107]/10">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto">
@@ -281,7 +276,20 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-center mt-8">
+              <p className="text-gray-600 mb-4">
+                Check out our introduction video:
+              </p>
+              <div className="max-w-2xl mx-auto">
+                <VideoPlayer
+                  videoUrl="https://cdn.poehali.dev/files/memeland_overview.mp4"
+                  posterUrl="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
+                  className="rounded-xl shadow-lg overflow-hidden aspect-video"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button className="bg-[#1A1F2C] hover:bg-[#1A1F2C]/80">
                 <Icon name="Rocket" className="mr-2" size={18} />
                 Become a MEMELAND Citizen
@@ -302,7 +310,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-[#1A1F2C] text-white py-12 px-4">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
