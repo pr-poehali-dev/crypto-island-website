@@ -1,10 +1,13 @@
+
 import React from "react";
 import Header from "@/components/Header";
 import Gallery from "@/components/Gallery";
 import TokenCard from "@/components/TokenCard";
 import IslandMap from "@/components/IslandMap";
 import Roadmap from "@/components/Roadmap";
-import Icon from "@/components/Icon";
+import TokenSale from "@/components/TokenSale";
+import Tokenomics from "@/components/Tokenomics";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
@@ -109,6 +112,8 @@ const Index = () => {
         </div>
       </section>
 
+      <TokenSale />
+      <Tokenomics />
       <Gallery />
       <IslandMap />
       <Roadmap />
@@ -134,16 +139,24 @@ const Index = () => {
               <h3 className="text-lg font-bold mb-4">Project</h3>
               <ul className="space-y-2">
                 <li>
-                  <span className="text-gray-400">About</span>
+                  <a href="#about" className="text-gray-400 hover:text-white transition-colors">
+                    About
+                  </a>
                 </li>
                 <li>
-                  <span className="text-gray-400">Island Map</span>
+                  <a href="#map" className="text-gray-400 hover:text-white transition-colors">
+                    Island Map
+                  </a>
                 </li>
                 <li>
-                  <span className="text-gray-400">Features</span>
+                  <a href="#features" className="text-gray-400 hover:text-white transition-colors">
+                    Features
+                  </a>
                 </li>
                 <li>
-                  <span className="text-gray-400">Roadmap</span>
+                  <a href="#roadmap" className="text-gray-400 hover:text-white transition-colors">
+                    Roadmap
+                  </a>
                 </li>
               </ul>
             </div>
@@ -151,17 +164,6 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-bold mb-4">Community</h3>
               <ul className="space-y-2">
-                <li>
-                  <a
-                    href="https://t.me/memeland_CTO"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-[#0088cc] transition-colors flex items-center gap-2"
-                  >
-                    <Icon name="Send" size={14} />
-                    <span>Telegram</span>
-                  </a>
-                </li>
                 <li>
                   <span className="text-gray-400">Twitter</span>
                 </li>
