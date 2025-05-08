@@ -51,15 +51,6 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <a
-            href="https://t.me/memeland_CTO"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 bg-[#0088cc] hover:bg-[#0088cc]/90 px-4 py-2 rounded-full text-white font-medium transition-colors"
-          >
-            <Icon name="Send" size={18} />
-            <span>Telegram</span>
-          </a>
           <Button variant="ghost" size="icon" className="md:hidden text-white">
             <Icon name="Menu" size={24} />
           </Button>

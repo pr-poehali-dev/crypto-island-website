@@ -128,15 +128,6 @@ const Index = () => {
               <p className="text-gray-400">
                 The first token in the world that will become a real island
               </p>
-              <a
-                href="https://t.me/memeland_CTO"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-[#0088cc] hover:text-[#0088cc]/80 transition-colors"
-              >
-                <Icon name="Send" size={18} />
-                <span>Join our Telegram</span>
-              </a>
             </div>
 
             <div>
