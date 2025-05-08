@@ -46,10 +46,10 @@ const Header = () => {
             Features
           </a>
           <a
-            href="#community"
+            href="#roadmap"
             className="text-white hover:text-[#FFC107] transition-colors"
           >
-            Community
+            Roadmap
           </a>
         </div>
 

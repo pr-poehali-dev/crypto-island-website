@@ -35,7 +35,7 @@ const regions: MapRegion[] = [
     x: 48,
     y: 15,
     description: "Peaceful area with beautiful views and exclusive meeting spots",
-    feature: "SHIBA INU Square",
+    feature: "Coconut Grove",
     rarity: "rare",
   },
   {
@@ -44,7 +44,7 @@ const regions: MapRegion[] = [
     x: 75,
     y: 45,
     description: "The party zone of the island with seaside attractions",
-    feature: "FARTCOIN Beach",
+    feature: "Crystal Beach",
     rarity: "uncommon",
   },
   {
@@ -62,7 +62,7 @@ const regions: MapRegion[] = [
     x: 55,
     y: 75,
     description: "Mysterious region with untapped potential and natural beauty",
-    feature: "FLOKI Forest",
+    feature: "Tropical Forest",
     rarity: "common",
   },
 ];
@@ -95,7 +95,7 @@ const IslandMap: React.FC = () => {
           Explore the different regions of our future island, each with unique features and attractions
         </p>
         <p className="text-center text-[#1A1F2C] font-medium mb-12">
-          SHIBA INU Square • FARTCOIN Beach • FLOKI Forest • And much more!
+          Coconut Grove • Crystal Beach • Tropical Forest • And much more!
         </p>
 
         <div className="relative w-full max-w-3xl mx-auto aspect-square bg-[#33C3F0]/30 rounded-full overflow-hidden">
