@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
@@ -17,38 +18,36 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <img
             src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-            alt="MемЛенд Лого"
+            alt="MEMELAND Logo"
             className="w-12 h-12 rounded-full"
           />
-          <span className="text-white font-bold text-xl font-playfair">
-            МемЛенд
-          </span>
+          <span className="text-white font-bold text-xl font-playfair">MEMELAND</span>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
           <a
-            href="#tokens"
+            href="#about"
             className="text-white hover:text-[#FFC107] transition-colors"
           >
-            Мемкоины
+            About
           </a>
           <a
             href="#map"
             className="text-white hover:text-[#FFC107] transition-colors"
           >
-            Карта острова
+            Island Map
           </a>
           <a
-            href="#trends"
+            href="#features"
             className="text-white hover:text-[#FFC107] transition-colors"
           >
-            Тренды
+            Features
           </a>
           <a
-            href="#about"
+            href="#community"
             className="text-white hover:text-[#FFC107] transition-colors"
           >
-            О проекте
+            Community
           </a>
         </div>
 
@@ -58,7 +57,7 @@ const Header = () => {
             className="border-[#FFC107] text-white hover:bg-[#FFC107] hover:text-[#1A1F2C]"
           >
             <Icon name="Wallet" className="mr-2" size={16} />
-            Подключить кошелек
+            Connect Wallet
           </Button>
           <Button variant="ghost" size="icon" className="md:hidden text-white">
             <Icon name="Menu" size={24} />
@@ -70,27 +69,25 @@ const Header = () => {
       <div className="container mx-auto px-4 pt-12 pb-24 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
           <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-4">
-            Добро пожаловать на остров{" "}
-            <span className="text-[#FFC107]">мемкоинов</span>
+            Welcome to the <span className="text-[#FFC107]">MEMELAND</span> Island
           </h1>
           <p className="text-white/80 text-lg mb-4 max-w-lg">
             "Bitcoin is boring. We're buying a REAL ISLAND."
           </p>
           <p className="text-white/80 mb-8 max-w-lg">
-            Первый в мире токен, который превратится в настоящий остров в
-            океане. И это не шутка.
+            The first token in the world that will transform into a real island in the ocean. And this is not a joke.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button className="bg-[#FFC107] text-[#1A1F2C] hover:bg-[#FFC107]/80">
               <Icon name="Compass" className="mr-2" size={18} />
-              Исследовать остров
+              Explore Island
             </Button>
             <Button
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-[#1A1F2C]"
             >
-              <Icon name="TrendingUp" className="mr-2" size={18} />
-              Топ мемкоинов
+              <Icon name="Users" className="mr-2" size={18} />
+              Join Community
             </Button>
           </div>
         </div>
@@ -98,7 +95,7 @@ const Header = () => {
         <div className="md:w-1/2 flex justify-center">
           <img
             src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-            alt="Остров МемЛенд"
+            alt="MEMELAND Island"
             className="w-full max-w-md animate-float-slow rounded-full shadow-lg"
           />
         </div>
