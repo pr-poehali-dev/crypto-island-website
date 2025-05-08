@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const Header = () => {
   return (
@@ -51,12 +52,6 @@ const Header = () => {
             Community
           </a>
         </div>
-
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" className="md:hidden text-white">
-            <Icon name="Menu" size={24} />
-          </Button>
-        </div>
       </nav>
 
       {/* Hero Section */}
@@ -93,10 +88,10 @@ const Header = () => {
         </div>
 
         <div className="md:w-1/2 flex justify-center">
-          <img
-            src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-            alt="MEMELAND Island"
-            className="w-full max-w-md animate-float-slow rounded-full shadow-lg"
+          <VideoPlayer
+            videoUrl="https://cdn.poehali.dev/files/memeland_promo.mp4"
+            posterUrl="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
+            className="w-full max-w-md rounded-2xl shadow-lg overflow-hidden"
           />
         </div>
       </div>

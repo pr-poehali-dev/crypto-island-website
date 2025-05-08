@@ -55,10 +55,6 @@ const Index = () => {
                 The world's first crypto-meme state with a physical island
               </p>
             </div>
-            <Button className="mt-4 md:mt-0 bg-[#33C3F0] hover:bg-[#33C3F0]/80">
-              <Icon name="FileText" className="mr-2" size={16} />
-              Read Whitepaper
-            </Button>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -237,15 +233,15 @@ const Index = () => {
                 </h3>
                 <ul className="text-left max-w-md mx-auto space-y-2">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FFC107]">•</span>
+                    <span className="text-[#FFC017]">•</span>
                     <span>Exclusive ID cards</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FFC107]">•</span>
+                    <span className="text-[#FFC017]">•</span>
                     <span>Titles (Governor, Meme Lord, Chief Kek)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#FFC107]">•</span>
+                    <span className="text-[#FFC017]">•</span>
                     <span>The right to name a street on the island</span>
                   </li>
                 </ul>
@@ -310,200 +306,22 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-[#1A1F2C] text-white py-12 px-4">
+      <footer className="bg-[#1A1F2C] text-white py-8 px-4">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center gap-3 mb-6 md:mb-0">
-              <img
-                src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
-                alt="MEMELAND Logo"
-                className="w-10 h-10 rounded-full"
-              />
-              <span className="text-xl font-bold font-playfair">MEMELAND</span>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center md:text-left mb-8 md:mb-0">
-              <div>
-                <h3 className="text-[#FFC107] font-medium mb-3">Navigation</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC107] transition-colors"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#about"
-                      className="hover:text-[#FFC107] transition-colors"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#map"
-                      className="hover:text-[#FFC107] transition-colors"
-                    >
-                      Map
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#community"
-                      className="hover:text-[#FFC107] transition-colors"
-                    >
-                      Community
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-[#FFC107] font-medium mb-3">Resources</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC107] transition-colors"
-                    >
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC107] transition-colors"
-                    >
-                      Whitepaper
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      FAQ
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Support
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-[#FFC107] font-medium mb-3">Community</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Telegram
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Discord
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Twitter
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Reddit
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-[#FFC017] font-medium mb-3">Legal</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Terms of Use
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-[#FFC017] transition-colors"
-                    >
-                      Disclaimer
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="flex justify-center items-center mb-4">
+            <img
+              src="https://cdn.poehali.dev/files/a05e31f2-80db-498f-a410-a0695917768f.png"
+              alt="MEMELAND Logo"
+              className="w-10 h-10 rounded-full"
+            />
+            <span className="text-xl font-bold font-playfair ml-3">
+              MEMELAND
+            </span>
           </div>
 
-          <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-white/60 mb-4 md:mb-0">
-              © 2025 MEMELAND. All rights reserved. Not financial advice.
-            </p>
-            <div className="flex gap-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-white hover:text-[#FFC017] hover:bg-transparent"
-              >
-                <Icon name="Twitter" size={20} />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-white hover:text-[#FFC017] hover:bg-transparent"
-              >
-                <Icon name="Github" size={20} />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-white hover:text-[#FFC017] hover:bg-transparent"
-              >
-                <Icon name="Linkedin" size={20} />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-white hover:text-[#FFC017] hover:bg-transparent"
-              >
-                <Icon name="Send" size={20} />
-              </Button>
-            </div>
-          </div>
+          <p className="text-sm text-white/60 text-center">
+            © 2025 MEMELAND. All rights reserved. Not financial advice.
+          </p>
         </div>
       </footer>
     </div>
