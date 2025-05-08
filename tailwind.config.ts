@@ -1,10 +1,14 @@
 
-import { type Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -14,10 +18,6 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
-        playfair: ["Playfair Display", "serif"],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -68,19 +68,43 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        playfair: ["Playfair Display", "serif"],
+      },
       keyframes: {
         "accordion-down": {
-          from: { height: "0", opacity: "0" },
-          to: { height: "var(--radix-accordion-content-height)", opacity: "1" },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)", opacity: "1" },
-          to: { height: "0", opacity: "0" },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "float-delay": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "float-delay": "float-delay 4s ease-in-out infinite 1s",
+        "float-slow": "float-slow 6s ease-in-out infinite 2s",
+        "pulse-slow": "pulse-slow 2s ease-in-out infinite",
       },
     },
   },
